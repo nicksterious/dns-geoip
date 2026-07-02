@@ -10,7 +10,7 @@ dig -t txt 188.12.23.34.geo.ipns.cc
 
 ## What is all that?
 
-| ASN (missing) | Long    | Lat     | City      | Post code | State (missing) | County  | Region  | Country ISO2 code | Country name | Continent |
+| ASN | Long    | Lat     | City      | Postcode | State | County  | Region  | Country code | Country | Continent |
 |---------------:|:--------|:--------|:----------|:----------|:----------------:|:--------|:--------|:-----------------:|:------------:|:---------:|
 |                | 44.1307 | 10.0218 | Fosdinovo | 54035     |                  | Tuscany | Tuscany | IT                | Italy        | Europe    |
 
@@ -90,7 +90,7 @@ You send your request as a DNS query. Your resolver and other resolvers upstream
 # Is it easy to work with?
 It's a lot easier than integrating a 3rd party GeoIP service. These come with dependencies to install and you must spend some time putting together code and tests so that it works properly.
 
-Most languages have native support for DNS resolution, in most (civilized) cases without additional dependencies, see code samples.
+Most languages have native support for DNS resolution, in most (civilized) cases without additional dependencies, see [code samples](https://github.com/nicksterious/dns-geoip/).
 
 # Roadmap
 If this gains positive feedback/traction I will work on scaling for capacity and contract a commercial, higher accuracy GeoIP database.
@@ -99,10 +99,10 @@ If this gains positive feedback/traction I will work on scaling for capacity and
 Not really, there's not much code to write and the architecture is quite simple, but here are a few ways you can help
 
 ## Code samples
-You're welcome to send a PR with code samples in your preferred language.
+You're welcome to [send a PR](https://github.com/nicksterious/dns-geoip/pulls) with code samples in your preferred language.
 
 ## Suggestions
-Please start a discussion if you have feedback or ideas.
+Please [start a discussion](https://github.com/nicksterious/dns-geoip/issues/new) if you have feedback or ideas.
 
 ## IP lists
-If you have up to date lists of IP addresses please open an issue.
+If you have up to date lists of IP addresses please [open an issue](https://github.com/nicksterious/dns-geoip/issues/new).
