@@ -112,3 +112,13 @@ Please [start a discussion](https://github.com/nicksterious/dns-geoip/issues/new
 
 ## IP lists
 If you have up to date lists of IP addresses please [open an issue](https://github.com/nicksterious/dns-geoip/issues/new).
+
+# Credits
+
+Website classless CSS theme [something-something](https://kimeiga.github.io/bahunya/)
+
+Markdown to HTML [converter](https://markdownlivepreview.dev/tools/html-converter)
+
+# License
+
+Code samples license: [WTFPL](https://en.wikipedia.org/wiki/WTFPL)
