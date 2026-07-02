@@ -33,30 +33,38 @@ dig -t txt 145.12.23.34.geo.ipns.cc
 => "|52.3824|4.8995|Unknown|0||Unknown|Unknown|NL|The Netherlands|Europe"
 ```
 
-Some Google IP addresses will show up as GoogleBot with unspecified location.
+Google IP addresses will show up as Google or GoogleBot with unspecified location.
 ```
-dig -t txt 66.249.100.100.geo.ipns.cc
+dig -t txt 66.249.64.100.geo.ipns.cc
 ```
 ```
 => "|37.43|-78.65|GoogleBot||||VA|US|United States|"
 ```
-
-WIP: spam bots / vulnerability scanners / scrapers / exploit scanners will show up as BadBot
 ```
-dig -t txt x.x.x.x.geo.ipns.cc
+dig -t txt 136.124.11.10.geo.ipns.cc
 ```
 ```
-=> "|0|0|BadBot|||||XX|International|"
+=> "|37.43|-78.65|Google||||VA|US|United States|"
 ```
 
-WIP: AI bots that send thousands of requests to your servers eating up your resources/CPU/RAM/bandwidth so that some rich corporations can make billions will show up as AIBot
+
+Spam bots / vulnerability scanners / exploit scanners / theme scanners  and some scrapers will show up as BadBot
 ```
-dig -t txt x.x.x.x.geo.ipns.cc
+dig -t txt 148.251.54.44.geo.ipns.cc
 ```
 ```
-=> "|0|0|AIBot|||||XX|International|"
+=> "|0|0|BadBot||||Unknown|XX|International|"
 ```
 
+AI bots that send tens of thousands of requests to your servers eating up your resources so that some rich corporations can make billions will show up as AIBot
+```
+dig -t txt 13.65.138.96.geo.ipns.cc
+```
+```
+=> "|0|0|AIBot||||Unknown|XX|International|"
+```
+
+There are also some detections in place for Cloudflare IPs, known pentest scanners, SEO scrapers, fake (impersonating) Google bots, Bing indexers and several other types of interesting IP blocks, they will all be documented soon.
 
 # Why?
 Almost any application uses a GeoIP service in some way: enhancing UX by pre-filling a signup/purchase/shipping form, logging traffic, geofencing, account security, fighting payment fraud, KYC, recommendation engines... to name just a few.
@@ -95,3 +103,6 @@ You're welcome to send a PR with code samples in your preferred language.
 
 ## Suggestions
 Please start a discussion if you have feedback or ideas.
+
+## IP lists
+If you have up to date lists of IP addresses please open an issue.
