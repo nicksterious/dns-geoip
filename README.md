@@ -2,10 +2,10 @@
 A free and super fast GeoIP service.
 
 ```
-dig -t txt 188.12.23.34.geoip.adstart.cc
+dig -t txt 188.12.23.34.geo.ipns.cc
 ```
 ```
-=> 188.12.23.34.geoip.adstart.cc. 86400 IN	TXT	"|44.1307|10.0218|Fosdinovo|54035||Tuscany|Tuscany|IT|Italy|Europe"
+=> 188.12.23.34.geo.ipns.cc. 86400 IN	TXT	"|44.1307|10.0218|Fosdinovo|54035||Tuscany|Tuscany|IT|Italy|Europe"
 ```
 
 ## What is all that?
@@ -27,7 +27,7 @@ Right now some IP addresses in low-density countries/areas will show up as Unkno
 
 If a a query is only partially resolved some missing data may show up as "Unknown", eg:
 ```
-dig -t txt 145.12.23.34.geoip.adstart.cc
+dig -t txt 145.12.23.34.geo.ipns.cc
 ```
 ```
 => "|52.3824|4.8995|Unknown|0||Unknown|Unknown|NL|The Netherlands|Europe"
@@ -35,7 +35,7 @@ dig -t txt 145.12.23.34.geoip.adstart.cc
 
 Some Google IP addresses will show up as GoogleBot with unspecified location.
 ```
-dig -t txt 66.249.100.100.geoip.adstart.cc
+dig -t txt 66.249.100.100.geo.ipns.cc
 ```
 ```
 => "|37.43|-78.65|GoogleBot||||VA|US|United States|"
@@ -43,7 +43,7 @@ dig -t txt 66.249.100.100.geoip.adstart.cc
 
 WIP: spam bots / vulnerability scanners / scrapers / exploit scanners will show up as BadBot
 ```
-dig -t txt x.x.x.x.geoip.adstart.cc
+dig -t txt x.x.x.x.geo.ipns.cc
 ```
 ```
 => "|0|0|BadBot|||||XX|International|"
@@ -51,7 +51,7 @@ dig -t txt x.x.x.x.geoip.adstart.cc
 
 WIP: AI bots that send thousands of requests to your servers eating up your resources/CPU/RAM/bandwidth so that some rich corporations can make billions will show up as AIBot
 ```
-dig -t txt x.x.x.x.geoip.adstart.cc
+dig -t txt x.x.x.x.geo.ipns.cc
 ```
 ```
 => "|0|0|AIBot|||||XX|International|"

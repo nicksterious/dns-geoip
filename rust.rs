@@ -4,7 +4,7 @@ use trust_dns_resolver::{config::*, lookup::TxtLookup};
 
 fn main() {
     let resolver = Resolver::new(ResolverConfig::default(), ResolverOpts::default()).unwrap();
-    let txt_response = resolver.txt_lookup("188.12.23.34.geoip.adstart.cc.");
+    let txt_response = resolver.txt_lookup("188.12.23.34.geo.ipns.cc.");
     display_txt(&txt_response);
 }
 
