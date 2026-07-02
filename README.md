@@ -1,6 +1,11 @@
 # What is this?
 A free and super fast GeoIP service.
 
+# Why is this?
+Because it's a faster and cheaper way to get GeoIP data without paying a fortune on subscriptions.
+
+# How does it work?
+
 ```
 dig -t txt 188.12.23.34.geo.ipns.cc
 ```
@@ -17,15 +22,17 @@ dig -t txt 188.12.23.34.geo.ipns.cc
 
 ## Notes
 
-This is a POC / public beta so don't use it in production yet.
+⚠️ This is a POC / public beta so don't use it in production just yet.
 
-ASN is WIP I'll be adding this once I get a database.
+⚠️ Data structure might change.
 
-"State" isn't available in the EU.
+* ASN is WIP I'll be adding this once I get a database.
 
-Right now some IP addresses in low-density countries/areas will show up as Unknown as pretty much nobody fully covers them on a city / post code level.
+* "State" isn't available in the EU.
 
-If a a query is only partially resolved some missing data may show up as "Unknown", eg:
+* Right now some IP addresses in low-density countries/areas will show up as Unknown as pretty much nobody fully covers them on a city / post code level.
+
+* If a a query is only partially resolved some missing data may show up as "Unknown", eg:
 ```
 dig -t txt 145.12.23.34.geo.ipns.cc
 ```
@@ -33,7 +40,7 @@ dig -t txt 145.12.23.34.geo.ipns.cc
 => "|52.3824|4.8995|Unknown|0||Unknown|Unknown|NL|The Netherlands|Europe"
 ```
 
-Google IP addresses will show up as Google or GoogleBot with unspecified location.
+* Google IP addresses will show up as Google or GoogleBot with unspecified location.
 ```
 dig -t txt 66.249.64.100.geo.ipns.cc
 ```
@@ -47,8 +54,7 @@ dig -t txt 136.124.11.10.geo.ipns.cc
 => "|37.43|-78.65|Google||||VA|US|United States|"
 ```
 
-
-Spam bots / vulnerability scanners / exploit scanners / theme scanners  and some scrapers will show up as BadBot
+* Spam bots / vulnerability scanners / exploit scanners / theme scanners  and some scrapers will show up as BadBot
 ```
 dig -t txt 148.251.54.44.geo.ipns.cc
 ```
@@ -56,7 +62,7 @@ dig -t txt 148.251.54.44.geo.ipns.cc
 => "|0|0|BadBot||||Unknown|XX|International|"
 ```
 
-AI bots that send tens of thousands of requests to your servers eating up your resources so that some rich corporations can make billions will show up as AIBot
+🍆 AI bots that send tens of thousands of requests to your servers eating up your resources so that some rich corporations can make billions will show up as AIBot
 ```
 dig -t txt 13.65.138.96.geo.ipns.cc
 ```
@@ -64,9 +70,9 @@ dig -t txt 13.65.138.96.geo.ipns.cc
 => "|0|0|AIBot||||Unknown|XX|International|"
 ```
 
-There are also some detections in place for Cloudflare IPs, known pentest scanners, SEO scrapers, fake (impersonating) Google bots, Bing indexers and several other types of interesting IP blocks, they will all be documented soon.
+* There are also some detections in place for Cloudflare IPs, known pentest scanners, SEO scrapers, fake (impersonating) Google bots, Bing indexers and several other types of interesting IP blocks, they will all be documented soon.
 
-# Why?
+# But why?
 Almost any application uses a GeoIP service in some way: enhancing UX by pre-filling a signup/purchase/shipping form, logging traffic, geofencing, account security, fighting payment fraud, KYC, recommendation engines... to name just a few.
 
 At some point we all end up integrating some 3rd party GeoIP service that may end up quite expensive as traffic builds up.
