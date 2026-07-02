@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
       - uses: actions/checkout@v7
+      
+      - name: Create branch
+        run: |
+          git checkout -b static-website-update
 
       - uses: davorg/readme-to-index@v1
         with:
