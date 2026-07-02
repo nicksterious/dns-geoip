@@ -30,8 +30,8 @@ jobs:
         # if: env.exit != 'true'
         run: |
           export GITHUB_TOKEN=${{ github.token }}
-          git config user.name "$USERNAME"
-          git config user.email "$USERNAME@$ADDRESS_SUFFIX"
+          git config --global user.name "$USERNAME"
+          git config --global user.email "$USERNAME@$ADDRESS_SUFFIX"
           git add --all website
           git commit -m "Updated website/index.html"
           git push origin static-website-update
