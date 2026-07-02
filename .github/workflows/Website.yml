@@ -27,7 +27,7 @@ jobs:
           fi
           
       - name: Commit & send PR
-        if: env.exit != 'true'
+        # if: env.exit != 'true'
         run: |
           export GITHUB_TOKEN=${{ github.token }}
           git config user.name "$USERNAME"
