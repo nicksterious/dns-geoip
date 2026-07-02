@@ -1,15 +1,37 @@
 name: Generate static page
-on: [push]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - website
 jobs:
   generate_website:
     runs-on: ubuntu-latest
     steps:  
       - uses: actions/checkout@v7
-        with:
-          sparse-checkout: |
-            README.md    
+
       - uses: davorg/readme-to-index@v1
         with:
           readme: README.md
           output: website/index.html
           css_url: https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css
+          
+      - name: Check for changes
+        run: |
+          pwd
+          ls -la
+          if git diff --quiet; then
+            echo "No changes detected. Exiting."
+            echo "exit=true" >> $GITHUB_ENV
+          fi
+          
+      - name: Commit & send PR
+        if: env.exit != 'true'
+        run: |
+          export GITHUB_TOKEN=${{ github.token }}
+          git config user.name "$USERNAME"
+          git config user.email "$USERNAME@$ADDRESS_SUFFIX"
+          git add --all website
+          git commit -m "Updated website/index.html"
+          git push origin static-website-update
+          gh pr create --title "Update static website" --body "Updated from README.md"
