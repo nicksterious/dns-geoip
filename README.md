@@ -106,17 +106,21 @@ If this gains positive feedback/traction I will work on scaling for capacity and
 
 IPv6 support is also high priority.
 
-# Can I help
+# Can I help?
 Not really, there's not much code to write and the architecture is quite simple, but here are a few ways you can help
 
 ## Code samples
 You're welcome to [send a PR](https://github.com/nicksterious/dns-geoip/pulls) with code samples in your preferred language.
 
 ## Suggestions
-Please [start a discussion](https://github.com/nicksterious/dns-geoip/issues/new) if you have feedback or ideas.
+Please [open an issue](https://github.com/nicksterious/dns-geoip/issues/new?template=BLANK_ISSUE) if you have feedback or ideas.
 
 ## IP lists
-If you have up to date lists of IP addresses please [open an issue](https://github.com/nicksterious/dns-geoip/issues/new).
+If you have up to date lists of IP addresses please [let us know](https://github.com/nicksterious/dns-geoip/issues/new?template=ip-list-available.md).
+
+## Bug reports
+
+If something isn't working properly please [let us know](https://github.com/nicksterious/dns-geoip/issues/new?template=bug_report.md)
 
 # Credits
 
