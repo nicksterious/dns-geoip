@@ -4,7 +4,10 @@ on:
   push:
     paths:
       - 'README.md'
-
+env:
+  USERNAME: ${{ github.actor }}
+  ADDRESS_SUFFIX: users.noreply.github.com
+  
 jobs:
   generate_website:
     runs-on: ubuntu-latest
