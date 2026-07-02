@@ -1,8 +1,6 @@
-# What is this?
-A free and super fast GeoIP service.
+# Super fast and free GeoIP service
 
-# Why is this?
-Because it's a faster and cheaper way to get GeoIP data without paying a fortune on subscriptions.
+A faster and cheaper way to get GeoIP data without paying a fortune on subscriptions.
 
 # How does it work?
 
