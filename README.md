@@ -82,11 +82,10 @@ This service aims to solve all that.
 ## Cheaper
 Stop paying two or three figures for commercial services. This service is free.
 
-## Faster
-REST API calls to 3rd party providers can take some good 50-100ms. This service typically replies in under 10ms, your application will become noticeably faster.
-
 ## How much faster is it?
-First time queries take some 100ms. Cached queries however take under 10ms. Yes, that is correct, __less than 10 milliseconds__.
+First time queries take some 100ms. Cached queries however take under 10ms. 
+
+Yes, that is correct, __less than 10 milliseconds__.
 
 ## More reliable
 Once a query is resolved your DNS resolver keeps it cached for 1 or more days. And if yours won't, other resolvers downstream will. This renders short outages irrelevant.
