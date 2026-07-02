@@ -2,8 +2,9 @@ name: Generate static page
 on:
   workflow_dispatch:
   push:
-    branches:
-      - website
+    paths:
+      - 'README.md'
+
 jobs:
   generate_website:
     runs-on: ubuntu-latest
