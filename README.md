@@ -1,6 +1,3 @@
-# Warning
-This is a public beta NOT suitable for production.
-
 # What is this?
 A free and super fast GeoIP service.
 
@@ -19,6 +16,8 @@ dig -t txt 188.12.23.34.geoip.adstart.cc
 
 
 ## Notes
+
+This is a POC / public beta so don't use it in production yet.
 
 ASN is WIP I'll be adding this once I get a database.
 
