@@ -1,0 +1,11 @@
+name: Generate static page
+on: [push]
+jobs:
+  generate_website:
+    runs-on: ubuntu-latest
+    steps:  
+      - uses: davorg/readme-to-index@v1
+        with:
+          readme: README.md
+          output: website/index.html
+          css_url: https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css
