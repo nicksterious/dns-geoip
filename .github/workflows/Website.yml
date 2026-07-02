@@ -21,17 +21,8 @@ jobs:
       - uses: davorg/readme-to-index@v1
         with:
           readme: README.md
-          output: website/index.html
+          output: docs/index.html
           css_url: https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css
-          
-      - name: Check for changes
-        run: |
-          pwd
-          ls -la
-          if git diff --quiet; then
-            echo "No changes detected. Exiting."
-            echo "exit=true" >> $GITHUB_ENV
-          fi
           
       - name: Commit & send PR
         # if: env.exit != 'true'
@@ -39,7 +30,7 @@ jobs:
           export GITHUB_TOKEN=${{ github.token }}
           git config --global user.name "$USERNAME"
           git config --global user.email "$USERNAME@$ADDRESS_SUFFIX"
-          git add --all website
-          git commit -m "Updated website/index.html"
+          git add --all docs
+          git commit -m "Updated docs/index.html"
           git push origin static-website-update
           gh pr create --title "Update static website" --body "Updated from README.md"
