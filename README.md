@@ -22,9 +22,9 @@ dig -t txt 188.12.23.34.geo.ipns.cc
 
 ## Notes
 
-⚠️ This is a POC / public beta so don't use it in production just yet.
+* This is a POC / public beta so don't use it in production just yet.
 
-⚠️ Data structure might change.
+* Data structure might change.
 
 * ASN is WIP I'll be adding this once I get a database.
 
@@ -62,7 +62,7 @@ dig -t txt 148.251.54.44.geo.ipns.cc
 => "|0|0|BadBot||||Unknown|XX|International|"
 ```
 
-🍆 AI bots that send tens of thousands of requests to your servers eating up your resources so that some rich corporations can make billions will show up as AIBot
+AI bots that send tens of thousands of requests to your servers eating up your resources so that some rich corporations can make tens of billions of dollars will show up as AIBot
 ```
 dig -t txt 13.65.138.96.geo.ipns.cc
 ```
@@ -87,6 +87,9 @@ Stop paying two or three figures for commercial services. This service is free.
 ## Faster
 REST API calls to 3rd party providers can take some good 50-100ms. This service typically replies in under 10ms, your application will become noticeably faster.
 
+## How much faster is it?
+First time queries take some 100ms. Cached queries however take under 10ms. Yes, that is correct, __less than 10 milliseconds__.
+
 ## More reliable
 Once a query is resolved your DNS resolver keeps it cached for 1 or more days. And if yours won't, other resolvers downstream will. This renders short outages irrelevant.
 
@@ -100,6 +103,8 @@ Most languages have native support for DNS resolution, in most (civilized) cases
 
 # Roadmap
 If this gains positive feedback/traction I will work on scaling for capacity and contract a commercial, higher accuracy GeoIP database.
+
+IPv6 support is also high priority.
 
 # Can I help
 Not really, there's not much code to write and the architecture is quite simple, but here are a few ways you can help
