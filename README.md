@@ -96,7 +96,7 @@ You send your request as a DNS query. Your resolver and other resolvers upstream
 # Is it easy to work with?
 It's a lot easier than integrating a 3rd party GeoIP service. These come with dependencies to install and you must spend some time putting together code and tests so that it works properly.
 
-Most languages have native support for DNS resolution, in most (civilized) cases without additional dependencies, see [code samples](https://github.com/nicksterious/dns-geoip/).
+Most languages have native support for DNS resolution, in most (civilized) cases without additional dependencies, see [code samples](https://github.com/nicksterious/dns-geoip/tree/main/examples).
 
 # Roadmap
 If this gains positive feedback/traction I will work on scaling for capacity and contract a commercial, higher accuracy GeoIP database.
