@@ -81,4 +81,13 @@ Most languages have native support for DNS resolution, in most cases without req
 If this gains positive feedback/traction I will work on scaling for capacity and contract a commercial, higher accuracy GeoIP database.
 
 # Can I help
-Not really, there's not much code to write and the architecture is quite simple. If you want to contribute towards infrastructure and database costs the BTC address is bc1qmeyqlqdjd0ak69d8z8zzhajfrgvq9vqa74muq8
+Not really, there's not much code to write and the architecture is quite simple, but here are a few ways you can help
+
+## Code samples
+You're welcome to send a PR with code samples in your preferred language. 
+
+## Suggestions
+Please start a discussion if you have feedback or ideas.
+
+## Infrastructure costs
+If you want to contribute towards infrastructure and IP database costs the BTC address is bc1qmeyqlqdjd0ak69d8z8zzhajfrgvq9vqa74muq8
